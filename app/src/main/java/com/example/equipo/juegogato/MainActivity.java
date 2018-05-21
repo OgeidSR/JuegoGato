@@ -4,13 +4,14 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.EditText;
+import android.widget.TextView;
+import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
     int turno,cont,conta=0;
     String letra;
-    EditText ganador;
+    TextView ganador;
     Button boton_1,boton_2,boton_3,boton_4,boton_5,boton_6,boton_7,boton_8,boton_9,volver_jugar,salir;
 
 
@@ -21,7 +22,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         super.setContentView(R.layout.activity_main);
 
         //Tomo mis referencias
-        ganador=(EditText)findViewById(R.id.ganador);
+        ganador=(TextView) findViewById(R.id.ganador);
         boton_1=(Button)(findViewById(R.id.boton_1));
         boton_2=(Button)(findViewById(R.id.boton_2));
         boton_3=(Button)(findViewById(R.id.boton_3));
@@ -48,6 +49,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
 
     }
+
+
 
     @Override
     public void onClick(View v) {
@@ -241,12 +244,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             boton_6.setEnabled(false);
             boton_8.setEnabled(false);
         }
-        else if(conta<9) {
-            conta++;
-        }
-        else {
-            ganador.setText("EMPATE");
-        }
+
 
     }//Fin del metodo Ganador
 
