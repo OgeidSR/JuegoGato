@@ -8,7 +8,7 @@ import android.widget.EditText;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
-    int turno,cont,conta0;
+    int turno,cont,conta=0;
     String letra;
     EditText ganador;
     Button boton_1,boton_2,boton_3,boton_4,boton_5,boton_6,boton_7,boton_8,boton_9,volver_jugar,salir;
@@ -158,6 +158,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     //Comparamos todos los botones de forma horizontal, vertical y diagonal para corroborar quien es el ganador si la letra es la misma
     public void Ganador(char letra){
+        //Horizontal
         if(boton_1.getText().toString().equals(letra+"") && (boton_2.getText().toString().equals(letra+"")) && (boton_3.getText().toString().equals(letra+""))){
             ganador.setText("Ganador: "+letra);
             ganador.setEnabled(false);//Se desactiva el Edit Text cuando nos dice el ganador
@@ -188,6 +189,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             boton_5.setEnabled(false);
             boton_6.setEnabled(false);
         }
+        //Vertical
         else if(boton_1.getText().toString().equals(letra+"") && (boton_4.getText().toString().equals(letra+"")) && (boton_7.getText().toString().equals(letra+""))) {
             ganador.setText("Ganador: " + letra);
             ganador.setEnabled(false);
@@ -217,6 +219,33 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             boton_4.setEnabled(false);
             boton_5.setEnabled(false);
             boton_8.setEnabled(false);
+        }
+        //Diagonal
+        else if(boton_1.getText().toString().equals(letra+"") && (boton_5.getText().toString().equals(letra+"")) && (boton_9.getText().toString().equals(letra+""))) {
+            ganador.setText("Ganador: " + letra);
+            ganador.setEnabled(false);
+            boton_6.setEnabled(false);//Desactivamos los botones por que solo estamos comparando los 3 primeros y no se pueda seguir jugando
+            boton_2.setEnabled(false);
+            boton_7.setEnabled(false);
+            boton_4.setEnabled(false);
+            boton_3.setEnabled(false);
+            boton_8.setEnabled(false);
+        }
+        else if(boton_3.getText().toString().equals(letra+"") && (boton_5.getText().toString().equals(letra+"")) && (boton_7.getText().toString().equals(letra+""))) {
+            ganador.setText("Ganador: " + letra);
+            ganador.setEnabled(false);
+            boton_1.setEnabled(false);//Desactivamos los botones por que solo estamos comparando los 3 primeros y no se pueda seguir jugando
+            boton_2.setEnabled(false);
+            boton_9.setEnabled(false);
+            boton_4.setEnabled(false);
+            boton_6.setEnabled(false);
+            boton_8.setEnabled(false);
+        }
+        else if(conta<9){
+            conta++;
+        }
+        else{
+            ganador.setText("EMPATE");
         }
 
     }//Fin del metodo Ganador
