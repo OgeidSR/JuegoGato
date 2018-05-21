@@ -66,10 +66,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     }//Final del OnClick
 
 
-    //Aqui creamos la funcion con la cual vamos a alternar entre un jugador y otro, bloqueando loos botones anteriores
+
 
     public void mostrarXO(char letra, View v){
-
+//Aqui hacemos que el boton de volver   a jugar active y limpie los 9 botones del juego
         if(v.getId()==R.id.volver_jugar){
             ganador.setEnabled(true);
             ganador.setText(" ");
@@ -102,8 +102,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             boton_9.setText(" ");
 
         }
+//Hacemos que el Btoton de salir nos sque de la aplicacion
+        if(v.getId()==R.id.salir){
+            System.exit(0);
+        }
 
-
+//Aqui creamos la funcion con la cual vamos a alternar entre un jugador y otro, bloqueando loos botones anteriores
         if(v.getId()==R.id.boton_1){
             boton_1.setText(letra+"");//El "" Es para que lo lea como toda una cadena de caracteres
             boton_1.setEnabled(false);//Esto es para que ese boton no pueda volver a imprimirse
@@ -142,7 +146,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             boton_8.setEnabled(false);
         }
 
-        else{
+        else if (v.getId()==R.id.boton_9) {
             boton_9.setText(letra + "");
             boton_9.setEnabled(false);
         }
