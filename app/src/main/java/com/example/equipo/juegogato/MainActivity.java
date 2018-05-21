@@ -180,7 +180,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             boton_9.setEnabled(false);
         }
         else if(boton_7.getText().toString().equals(letra+"") && (boton_8.getText().toString().equals(letra+"")) && (boton_9.getText().toString().equals(letra+""))) {
-            ganador.setText("Ganador: " + letra);
+            ganador.setText("Ganador: "+letra);
             ganador.setEnabled(false);
             boton_1.setEnabled(false);//Desactivamos los botones por que solo estamos comparando los 3 primeros y no se pueda seguir jugando
             boton_2.setEnabled(false);
@@ -191,7 +191,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         }
         //Vertical
         else if(boton_1.getText().toString().equals(letra+"") && (boton_4.getText().toString().equals(letra+"")) && (boton_7.getText().toString().equals(letra+""))) {
-            ganador.setText("Ganador: " + letra);
+            ganador.setText("Ganador: "+letra);
             ganador.setEnabled(false);
             boton_8.setEnabled(false);//Desactivamos los botones por que solo estamos comparando los 3 primeros y no se pueda seguir jugando
             boton_2.setEnabled(false);
@@ -201,7 +201,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             boton_6.setEnabled(false);
         }
         else if(boton_2.getText().toString().equals(letra+"") && (boton_5.getText().toString().equals(letra+"")) && (boton_8.getText().toString().equals(letra+""))) {
-            ganador.setText("Ganador: " + letra);
+            ganador.setText("Ganador: "+letra);
             ganador.setEnabled(false);
             boton_1.setEnabled(false);//Desactivamos los botones por que solo estamos comparando los 3 primeros y no se pueda seguir jugando
             boton_9.setEnabled(false);
@@ -211,7 +211,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             boton_6.setEnabled(false);
         }
         else if(boton_3.getText().toString().equals(letra+"") && (boton_6.getText().toString().equals(letra+"")) && (boton_9.getText().toString().equals(letra+""))) {
-            ganador.setText("Ganador: " + letra);
+            ganador.setText("Ganador: "+letra);
             ganador.setEnabled(false);
             boton_1.setEnabled(false);//Desactivamos los botones por que solo estamos comparando los 3 primeros y no se pueda seguir jugando
             boton_2.setEnabled(false);
@@ -222,7 +222,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         }
         //Diagonal
         else if(boton_1.getText().toString().equals(letra+"") && (boton_5.getText().toString().equals(letra+"")) && (boton_9.getText().toString().equals(letra+""))) {
-            ganador.setText("Ganador: " + letra);
+            ganador.setText("Ganador: "+letra);
             ganador.setEnabled(false);
             boton_6.setEnabled(false);//Desactivamos los botones por que solo estamos comparando los 3 primeros y no se pueda seguir jugando
             boton_2.setEnabled(false);
@@ -232,7 +232,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             boton_8.setEnabled(false);
         }
         else if(boton_3.getText().toString().equals(letra+"") && (boton_5.getText().toString().equals(letra+"")) && (boton_7.getText().toString().equals(letra+""))) {
-            ganador.setText("Ganador: " + letra);
+            ganador.setText("Ganador: "+letra);
             ganador.setEnabled(false);
             boton_1.setEnabled(false);//Desactivamos los botones por que solo estamos comparando los 3 primeros y no se pueda seguir jugando
             boton_2.setEnabled(false);
@@ -241,10 +241,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             boton_6.setEnabled(false);
             boton_8.setEnabled(false);
         }
-        else if(conta<9){
+        else if(conta<9) {
             conta++;
         }
-        else{
+        else {
             ganador.setText("EMPATE");
         }
 
