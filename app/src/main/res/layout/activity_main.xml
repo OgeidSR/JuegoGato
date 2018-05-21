@@ -6,9 +6,10 @@
     android:layout_gravity="center">
     <!-- Esta propiedad es donde iran los datos del ganador -->
     <LinearLayout
-        android:layout_width="wrap_content"
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/datos">
+        android:id="@+id/datos"
+        android:gravity="center">
 
         <TextView
             android:layout_width="wrap_content"
@@ -24,7 +25,7 @@
     <!-- Aqui cree mi primer linear layout donde estaran los primeros 3 botones del juego -->
 
     <LinearLayout
-        android:layout_width="wrap_content"
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:id="@+id/primera_fila"
         android:orientation="horizontal"
@@ -53,7 +54,7 @@
     </LinearLayout>
     <!-- Segunda linea de botones -->
     <LinearLayout
-        android:layout_width="wrap_content"
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:id="@+id/segunda_fila"
         android:orientation="horizontal"
@@ -87,7 +88,7 @@
     </LinearLayout>
     <!-- Tercera linea de botones -->
     <LinearLayout
-        android:layout_width="wrap_content"
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:id="@+id/tercera_fila"
         android:orientation="horizontal"
@@ -118,11 +119,22 @@
 
 
     </LinearLayout>
-
-
-
-
-
-
-
+    <!-- Botones para poder volver a jugar y salir -->
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tercera_fila"
+        android:orientation="vertical"
+        android:gravity="center">
+      <Button
+          android:layout_width="100dp"
+          android:layout_height="50dp"
+          android:text="Volver a Jugar"
+          android:id="@+id/volver_jugar"/>
+        <Button
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:text="SALIR"
+            android:id="@+id/salir"/>
+    </LinearLayout>
 </RelativeLayout>

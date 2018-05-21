@@ -50,17 +50,17 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         contador++;
         turno=contador%2;
         if(turno==1){
-            mostrarXO('x',v);
+            mostrarXO('X',v);
         }
         //Segundo Jugador
         else{
-            mostrarXO('o',v);
+            mostrarXO('O',v);
         }
 
     }//Final del OnClick
 
 
-    //Aqui creamos la funcion con la cual vamos a alternar entre un jugador y otro bloqueando loos botones anteriores
+    //Aqui creamos la funcion con la cual vamos a alternar entre un jugador y otro, bloqueando loos botones anteriores
 
     public void mostrarXO(char letra, View v){
 
