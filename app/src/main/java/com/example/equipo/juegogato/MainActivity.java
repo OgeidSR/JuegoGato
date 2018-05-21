@@ -8,9 +8,10 @@ import android.widget.EditText;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
-    int turno,contador;
+    int turno,cont,conta0;
+    String letra;
     EditText ganador;
-    Button boton_1,boton_2,boton_3,boton_4,boton_5,boton_6,boton_7,boton_8,boton_9;
+    Button boton_1,boton_2,boton_3,boton_4,boton_5,boton_6,boton_7,boton_8,boton_9,volver_jugar,salir;
 
 
 
@@ -20,6 +21,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         super.setContentView(R.layout.activity_main);
 
         //Tomo mis referencias
+        ganador=(EditText)findViewById(R.id.ganador);
         boton_1=(Button)(findViewById(R.id.boton_1));
         boton_2=(Button)(findViewById(R.id.boton_2));
         boton_3=(Button)(findViewById(R.id.boton_3));
@@ -29,6 +31,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         boton_7=(Button)(findViewById(R.id.boton_7));
         boton_8=(Button)(findViewById(R.id.boton_8));
         boton_9=(Button)(findViewById(R.id.boton_9));
+        volver_jugar=(Button)(findViewById(R.id.volver_jugar));
+        salir=(Button)(findViewById(R.id.salir));
         //Asignamos el OnClick en cada Boton
         boton_1.setOnClickListener(this);
         boton_2.setOnClickListener(this);
@@ -39,6 +43,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         boton_7.setOnClickListener(this);
         boton_8.setOnClickListener(this);
         boton_9.setOnClickListener(this);
+        volver_jugar.setOnClickListener(this);
+        salir.setOnClickListener(this);
 
 
     }
@@ -47,8 +53,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     public void onClick(View v) {
 
         //Primer Jugador
-        contador++;
-        turno=contador%2;
+        cont++;
+        turno=cont%2;
         if(turno==1){
             mostrarXO('X',v);
         }
@@ -63,6 +69,40 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     //Aqui creamos la funcion con la cual vamos a alternar entre un jugador y otro, bloqueando loos botones anteriores
 
     public void mostrarXO(char letra, View v){
+
+        if(v.getId()==R.id.volver_jugar){
+            ganador.setEnabled(true);
+            ganador.setText(" ");
+
+            boton_1.setEnabled(true);
+            boton_1.setText(" ");
+
+            boton_2.setEnabled(true);
+            boton_2.setText(" ");
+
+            boton_3.setEnabled(true);
+            boton_3.setText(" ");
+
+            boton_4.setEnabled(true);
+            boton_4.setText(" ");
+
+            boton_5.setEnabled(true);
+            boton_5.setText(" ");
+
+            boton_6.setEnabled(true);
+            boton_6.setText(" ");
+
+            boton_7.setEnabled(true);
+            boton_7.setText(" ");
+
+            boton_8.setEnabled(true);
+            boton_8.setText(" ");
+
+            boton_9.setEnabled(true);
+            boton_9.setText(" ");
+
+        }
+
 
         if(v.getId()==R.id.boton_1){
             boton_1.setText(letra+"");//El "" Es para que lo lea como toda una cadena de caracteres
